@@ -46,9 +46,21 @@ public class Taskjava2 {
         int index = num - 1;  
         System.out.println("The day of the week is: " + week[index]);
         switch (index) {
-        case 0: // Saturday
-        System.out.println("*");
-        break;
+        case 0: {// Saturday
+//          for(int i=0;i<5;i++){
+//             System.out.println("*");}
+            
+        for ( int i = 1; i <= 5; i++) { 
+            for ( int j = 4; j >= i; j--) { 
+                System.out.print(" "); 
+            } 
+            for ( int k = 1; k<=(i*2 - 1 ) ; k++) {
+                 System.out.print("*"); 
+            }
+            System.out.println(" ");
+         }         
+        break; 
+        }
         case 1,2: // Sunday
         System.out.println("Enter a number (N): ");
         int N = input.nextInt();
